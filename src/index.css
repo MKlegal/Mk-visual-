@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-aura-blue: #0ea5e9;
+  --color-aura-purple: #a855f7;
+  --color-aura-slate: #334155;
+}
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-slate-50 via-blue-50 to-white text-aura-slate font-sans antialiased min-h-screen;
+  }
+}
+
+.glass-panel {
+  @apply backdrop-blur-[40px] bg-white/40 border border-white shadow-[0_8px_32px_rgba(0,0,0,0.05)];
+  box-shadow: 
+    0 8px 32px 0 rgba(31, 38, 135, 0.07),
+    inset 0 0 1px 1px rgba(255, 255, 255, 0.8);
+}
+
+.node-gradient {
+  background: linear-gradient(135deg, var(--color-aura-blue), var(--color-aura-purple));
+}
+
+.cta-neo-glow {
+  background: white;
+  box-shadow: 
+    0 0 20px rgba(14, 165, 233, 0.2),
+    inset 0 0 10px rgba(14, 165, 233, 0.1);
+  @apply border border-white backdrop-blur-md;
+}
+
+.cta-neo-glow:hover {
+  box-shadow: 
+    0 0 25px rgba(14, 165, 233, 0.4),
+    inset 0 0 15px rgba(14, 165, 233, 0.2);
+}
+
+.flow-line {
+  filter: drop-shadow(0 0 8px rgba(14, 165, 233, 0.6));
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-blue-200/50 rounded-full;
+}
